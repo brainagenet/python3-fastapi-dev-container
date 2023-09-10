@@ -36,6 +36,8 @@ services:
       - --collation-server=utf8mb4_unicode_ci
       - --lower_case_table_names=1
     restart: unless-stopped
+    ports:
+      - '3306:3306'
     volumes:
       - mysql-data:/var/lib/mysql
     environment:
